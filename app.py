@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, abort
+from flask import request
 
 days = [
     {"id": 1, "name": "Lunes"},
@@ -30,6 +31,18 @@ def get_day(day_id):
 def post_days():
     return jsonify({"success": True}), 201
 
+#Medoto POST
+@app.route("/saludo", methods=["POST"])
+def saludo():
+    data = request.get_json()
+    nombre = data.get("nombre", "amigo")
+    return jsonify({"mensaje": f"Hola, {nombre}!"})
+
+
+#Metodo GET
+@app.route("/hello", methods=["GET"])
+def hello():
+    return jsonify({"message": "Hola, mundo!"})
 
 if __name__ == "__main__":
     app.run(debug=True)
