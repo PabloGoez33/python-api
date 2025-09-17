@@ -1,13 +1,13 @@
 from flask import Flask, jsonify, abort
 
 days = [
-    {"id": 1, "name": "Monday"},
-    {"id": 2, "name": "Tuesday"},
-    {"id": 3, "name": "Wednesday"},
-    {"id": 4, "name": "Thursday"},
-    {"id": 5, "name": "Friday"},
-    {"id": 6, "name": "Saturday"},
-    {"id": 7, "name": "Sunday"},
+    {"id": 1, "name": "Lunes"},
+    {"id": 2, "name": "Martes"},
+    {"id": 3, "name": "Miercoles"},
+    {"id": 4, "name": "Jueves"},
+    {"id": 5, "name": "Viernes"},
+    {"id": 6, "name": "Sabado"},
+    {"id": 7, "name": "Domingo"},
 ]
 
 app = Flask(__name__)
